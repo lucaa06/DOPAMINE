@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="DopamineApp" company="YourCompany" webLink="https://www.yourcompany.com" version="2.0">
+  <description>Progetto completo per lo sviluppo dell'applicazione Dopamine</description>
+  
+  <tasks>
+    <taskproperties>
+      <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+      <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+      <taskproperty id="tpd2" name="info" type="default" valuetype="text"/>
+    </taskproperties>
+    
+    <!-- Fase 1: Setup -->
+    <task id="1" name="Fase 1: Setup" start="2025-01-01" duration="7" complete="100" expanded="true">
+      <task id="2" name="Configurazione ambiente Java/Spring" start="2025-01-01" duration="3" complete="100"/>
+      <task id="3" name="Creazione struttura progetto Maven" start="2025-01-04" duration="2" complete="100" depends="2"/>
+      <task id="4" name="Configurazione DB H2" start="2025-01-06" duration="1" complete="100" depends="3"/>
+    </task>
+    
+    <!-- Fase 2: Modelli -->
+    <task id="5" name="Fase 2: Modelli" start="2025-01-08" duration="10" complete="70" expanded="true">
+      <task id="6" name="Implementazione User/Admin/Operator" start="2025-01-08" duration="3" complete="100" depends="4"/>
+      <task id="7" name="Modelli Community/Group" start="2025-01-11" duration="4" complete="50" depends="6"/>
+      <task id="8" name="Sistema Messaggistica" start="2025-01-15" duration="3" complete="30" depends="7"/>
+    </task>
+    
+    <!-- Fase 3: Autenticazione (in parallelo con Fase 2) -->
+    <task id="9" name="Fase 3: Autenticazione" start="2025-01-18" duration="8" complete="20" expanded="true">
+      <task id="10" name="Login/Registrazione" start="2025-01-18" duration="3" complete="40" depends="4"/>
+      <task id="11" name="Gestione Password" start="2025-01-21" duration="2" complete="10" depends="10"/>
+      <task id="12" name="Spring Security Setup" start="2025-01-23" duration="3" complete="0" depends="11"/>
+    </task>
+    
+    <!-- Fase 4: Funzionalità Core -->
+    <task id="13" name="Fase 4: Funzionalità Core" start="2025-01-26" duration="14" expanded="true">
+      <task id="14" name="Sistema Community" start="2025-01-26" duration="5" depends="7,10"/>
+      <task id="15" name="Advertising Module" start="2025-01-31" duration="4" depends="14"/>
+      <task id="16" name="Moderazione Contenuti" start="2025-02-04" duration="5" depends="15"/>
+    </task>
+    
+    <!-- Fase 5: UI (in parallelo con Fase 4) -->
+    <task id="17" name="Fase 5: UI" start="2025-02-10" duration="12" expanded="true">
+      <task id="18" name="Login/Register UI" start="2025-02-10" duration="3" depends="10"/>
+      <task id="19" name="Dashboard Utente" start="2025-02-13" duration="5" depends="18,14"/>
+      <task id="20" name="Admin Panel" start="2025-02-18" duration="4" depends="19,16"/>
+    </task>
+    
+    <!-- Fase 6: Test -->
+    <task id="21" name="Fase 6: Test" start="2025-02-24" duration="7" expanded="true">
+      <task id="22" name="Unit Test" start="2025-02-24" duration="3" depends="16,19"/>
+      <task id="23" name="Integration Test" start="2025-02-27" duration="4" depends="22"/>
+    </task>
+    
+    <!-- Deployment -->
+    <task id="24" name="Deployment" start="2025-03-03" duration="3" depends="23"/>
+  </tasks>
+  
+  <!-- Risorse -->
+  <resources>
+    <resource id="1" name="Team Java" function="Sviluppo Backend" contacts="java-team@yourcompany.com"/>
+    <resource id="2" name="Team Frontend" function="UI/UX" contacts="frontend-team@yourcompany.com"/>
+    <resource id="3" name="Team QA" function="Test" contacts="qa-team@yourcompany.com"/>
+    <resource id="4" name="Team DevOps" function="Deployment" contacts="devops@yourcompany.com"/>
+  </resources>
+  
+  <!-- Assegnazioni -->
+  <allocations>
+    <!-- Fase 1 -->
+    <allocation task-id="2" resource-id="1"/>
+    <allocation task-id="3" resource-id="1"/>
+    <allocation task-id="4" resource-id="1"/>
+    
+    <!-- Fase 2 -->
+    <allocation task-id="6" resource-id="1"/>
+    <allocation task-id="7" resource-id="1"/>
+    <allocation task-id="8" resource-id="1"/>
+    
+    <!-- Fase 3 -->
+    <allocation task-id="10" resource-id="1"/>
+    <allocation task-id="11" resource-id="1"/>
+    <allocation task-id="12" resource-id="1"/>
+    
+    <!-- Fase 4 -->
+    <allocation task-id="14" resource-id="1"/>
+    <allocation task-id="15" resource-id="1"/>
+    <allocation task-id="16" resource-id="1"/>
+    
+    <!-- Fase 5 -->
+    <allocation task-id="18" resource-id="2"/>
+    <allocation task-id="19" resource-id="2"/>
+    <allocation task-id="20" resource-id="2"/>
+    
+    <!-- Fase 6 -->
+    <allocation task-id="22" resource-id="3"/>
+    <allocation task-id="23" resource-id="3"/>
+    
+    <!-- Deployment -->
+    <allocation task-id="24" resource-id="4"/>
+  </allocations>
+  
+  <!-- Colonne visualizzate -->
+  <columns>
+    <column id="tpd0" width="50"/>
+    <column id="tpd1" width="50"/>
+    <column id="name" width="200"/>
+    <column id="begindate" width="90"/>
+    <column id="enddate" width="90"/>
+    <column id="duration" width="70"/>
+    <column id="complete" width="70"/>
+    <column id="resources" width="150"/>
+  </columns>
+  
+  <!-- Impostazioni grafiche -->
+  <viewsettings>
+    <showdependencies>true</showdependencies>
+    <showcriticalpath>true</showcriticalpath>
+    <showtaskprogress>true</showtaskprogress>
+    <showresourcenames>true</showresourcenames>
+    <timeunit>days</timeunit>
+    <weekstart>monday</weekstart>
+  </viewsettings>
+  
+  <!-- Dipendenze aggiuntive per parallelismo -->
+  <dependencies>
+    <dependency from="4" to="10" type="2"/> <!-- Fine-Start tra DB Setup e Login -->
+    <dependency from="7" to="14" type="2"/> <!-- Fine-Start tra Modelli Community e Sistema Community -->
+    <dependency from="10" to="18" type="2"/> <!-- Fine-Start tra Login/Registrazione e Login/Register UI -->
+    <dependency from="14" to="19" type="2"/> <!-- Fine-Start tra Sistema Community e Dashboard Utente -->
+    <dependency from="16" to="20" type="2"/> <!-- Fine-Start tra Moderazione Contenuti e Admin Panel -->
+    <dependency from="19" to="22" type="2"/> <!-- Fine-Start tra Dashboard Utente e Unit Test -->
+    <dependency from="16" to="22" type="2"/> <!-- Fine-Start tra Moderazione Contenuti e Unit Test -->
+  </dependencies>
+</project>

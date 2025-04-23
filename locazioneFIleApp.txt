@@ -1,0 +1,34 @@
+src/
+├── main/
+│   ├── java/
+│   │   └── com/
+│   │       └── dopamine/
+│   │           ├── controller/
+│   │           │   ├── AuthController.java
+│   │           │   ├── CommunityController.java
+│   │           │   └── AdminController.java
+│   │           ├── model/
+│   │           │   ├── user/
+│   │           │   │   ├── User.java
+│   │           │   │   ├── Admin.java
+│   │           │   │   ├── Operator.java
+│   │           │   │   └── Guest.java
+│   │           │   ├── Community.java
+│   │           │   ├── Group.java
+│   │           │   └── Content.java
+│   │           ├── service/
+│   │           │   ├── AuthService.java
+│   │           │   ├── ModerationService.java
+│   │           │   └── AdvertisingService.java
+│   │           ├── view/
+│   │           │   ├── LoginView.java
+│   │           │   ├── DashboardView.java
+│   │           │   └── AdminPanelView.java
+│   │           └── MainApp.java
+│   └── resources/
+│       ├── static/
+│       │   ├── images/ (contiene tutte le immagini del capodanno cinese)
+│       │   └── css/
+│       ├── templates/ (per Thymeleaf se usi Spring Boot)
+│       └── application.properties
+└── test/ (test unitari)
