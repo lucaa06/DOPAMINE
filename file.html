@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOPAMINE</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <style>
+        :root {
+            --primary: #111;
+            --secondary: #f5f5f7;
+            --accent: #0071e3;
+            --card-bg: #fff;
+            --card-shadow: 0 4px 24px rgba(0,0,0,0.07);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            background: var(--secondary);
+            color: var(--primary);
+            font-family: "SF Pro Display", Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            min-height: 100vh;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 64px;
+        }
+        nav ul {
+            display: flex;
+            gap: 36px;
+            list-style: none;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 17px;
+            padding: 8px 0;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 90px;
+            margin-bottom: 40px;
+        }
+        header img {
+            height: 56px;
+            margin-right: 18px;
+        }
+        h1 {
+            font-size: 44px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0 24px 60px 24px;
+        }
+        section {
+            background: var(--card-bg);
+            border-radius: 18px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 48px;
+            padding: 44px 38px 38px 38px;
+            transition: box-shadow 0.2s;
+        }
+        section:hover {
+            box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 18px;
+            color: var(--accent);
+        }
+        p {
+            font-size: 19px;
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+        .news-item {
+            background: #f7f7fa;
+            border-radius: 10px;
+            padding: 26px 22px;
+            font-size: 18px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            transition: box-shadow 0.2s;
+        }
+        .news-item:hover {
+            box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+        }
+        @media (max-width: 700px) {
+            header {
+                margin-top: 80px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            .container {
+                padding: 0 6vw 40px 6vw;
+            }
+            section {
+                padding: 28px 12px 22px 12px;
+            }
+            nav ul {
+                gap: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#why">Perché</a></li>
+            <li><a href="#content">Contenuti</a></li>
+            <li><a href="#news">News</a></li>
+        </ul>
+    </nav>
+    <header>
+        <img src="logo.png" alt="DOPAMINE Logo">
+        <h1>DOPAMINE</h1>
+    </header>
+    <div class="container">
+        <section id="intro">
+            <p>
+                <strong>DOPAMINE</strong> è uno spazio digitale nato per diffondere ottimismo, motivazione e ispirazione. In un mondo spesso dominato da notizie negative, qui troverai solo storie, idee e innovazioni che mostrano il meglio della società e del progresso umano. Ogni contenuto è selezionato con cura per offrire una prospettiva positiva, aiutandoti a vedere il lato luminoso delle cose e a credere nelle possibilità del futuro.
+            </p>
+            <p>
+                La nostra missione è semplice: alimentare la tua energia e la tua speranza, ogni giorno. Che tu stia cercando una spinta per iniziare la giornata o semplicemente voglia scoprire ciò che di buono accade nel mondo, DOPAMINE è il luogo giusto per te.
+            </p>
+        </section>
+
+        <section id="why">
+            <h2>Perché DOPAMINE?</h2>
+            <p>
+                Viviamo in un'epoca di cambiamenti rapidi e sfide globali. Spesso, le notizie che riceviamo ci fanno sentire impotenti o scoraggiati. DOPAMINE nasce per invertire questa tendenza: vogliamo creare una piattaforma che dia spazio a innovazioni, esperienze motivanti e storie di successo che dimostrano il potere della positività e della resilienza umana.
+            </p>
+            <p>
+                Crediamo che raccontare il bene sia fondamentale per ispirare nuove idee, rafforzare la fiducia collettiva e promuovere una cultura della speranza. Ogni storia che condividiamo è una testimonianza di ciò che possiamo raggiungere insieme, quando scegliamo di guardare avanti con ottimismo.
+            </p>
+        </section>
+
+        <section id="content">
+            <h2>Contenuti e approfondimenti</h2>
+            <p>
+                Su DOPAMINE troverai una selezione di storie che spaziano dalle scoperte scientifiche alle iniziative sociali, dai progetti di sostenibilità alle testimonianze di chi ha trasformato una difficoltà in un'opportunità. Ogni articolo, intervista o approfondimento è pensato per dare energia, ispirazione e strumenti concreti per migliorare la propria vita e quella degli altri.
+            </p>
+            <p>
+                Il nostro obiettivo è condividere idee che migliorano il mondo, offrendo spunti pratici e racconti autentici. Vogliamo che ogni visita su DOPAMINE sia un'esperienza positiva, capace di accendere la tua curiosità e la tua voglia di contribuire al cambiamento.
+            </p>
+        </section>
+
+        <section id="news">
+            <h2>Ultime notizie positive</h2>
+            <div class="news-list" id="news-list"></div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const newsContainer = document.getElementById("news-list");
+            const newsItems = [
+                "Una nuova tecnologia sostenibile potrebbe rivoluzionare il settore energetico, riducendo drasticamente le emissioni e rendendo l’energia pulita accessibile a tutti.",
+                "Un progetto comunitario sta migliorando la qualità della vita nelle città, creando spazi verdi condivisi e promuovendo la partecipazione attiva dei cittadini.",
+                "Scoperta una soluzione innovativa per ridurre gli sprechi alimentari: una piattaforma digitale collega supermercati e associazioni benefiche per donare cibo in eccesso.",
+                "Una startup lancia un’idea che rende la mobilità più ecologica e accessibile, offrendo veicoli elettrici condivisi a prezzi sostenibili.",
+                "Un gruppo di giovani ricercatori italiani ha sviluppato un’app che aiuta le persone a gestire lo stress quotidiano attraverso tecniche di mindfulness e supporto personalizzato.",
+                "Un’iniziativa scolastica porta l’educazione ambientale nelle classi, coinvolgendo studenti e insegnanti in progetti di tutela della biodiversità locale.",
+                "Un ospedale introduce un programma di assistenza innovativo che migliora il benessere dei pazienti grazie all’uso della realtà virtuale e di attività creative."
+            ];
+            
+            newsItems.forEach(news => {
+                const div = document.createElement("div");
+                div.className = "news-item";
+                div.textContent = news;
+                newsContainer.appendChild(div);
+            });
+        });
+    </script>
+</body>
+</html>
